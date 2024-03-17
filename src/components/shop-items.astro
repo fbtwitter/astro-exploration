@@ -1,0 +1,31 @@
+---
+function formatCurrency(amount: number) {
+	return new Intl.NumberFormat('id-ID', {
+		currency: 'IDR',
+		style: 'currency',
+	}).format;
+}
+
+const result = await fetch(
+	'https://astro-frontend-masters-api.netlify.app/api/products'
+);
+
+
+if (!result.ok) {
+	console.error(result);
+}
+
+const shopItems: ShopItem[] = await result.json();
+---
+
+<section class="shop-items">
+	{
+		shopItems.map((item) => {
+			return (
+				<div class="item">
+					<img src={item.image.src} alt="" />
+				</div>
+			);
+		})
+	}
+</section>

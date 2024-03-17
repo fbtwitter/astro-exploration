@@ -1,3 +1,7 @@
+# Editor preferences
+.history
+.idea
+
 # build output
 dist/
 # generated types
