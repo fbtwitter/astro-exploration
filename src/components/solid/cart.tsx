@@ -38,7 +38,7 @@ export const Cart = () => {
 		<aside class={styles.cart}>
 			<h2>Your Cart</h2>
 			<Show when={Object.values($cart()).length > 0} fallback={<EmptyState />}>
-				<ul class={styles.item}>
+				<ul class={styles.items}>
 					{Object.values($cart()).map((entry: CartItem) => {
 						if (!entry) return null;
 
