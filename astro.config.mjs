@@ -8,9 +8,9 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   site: "https://astro-frontend-masters.netlify.app",
   output: "hybrid",
-  experimental: {
-    hybridOutput: true
-  },
+  // experimental: {
+  //   hybridOutput: true
+  // },
   integrations: [react({
     include: ['**/react/*']
   }), solidJs({
