@@ -11,15 +11,11 @@ const result = await fetch(
 	'https://astro-frontend-masters-api.netlify.app/api/products'
 );
 
-console.log(result);
-
 if (!result.ok) {
 	console.error(result);
 }
 
 const shopItems: ShopItem[] = await result.json();
-
-console.log(shopItems);
 
 interface Props {
 	count?: number;
